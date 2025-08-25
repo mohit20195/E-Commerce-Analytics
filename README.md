@@ -16,6 +16,7 @@ KPIs for business performance monitoring
 
 
 
+
 🛠 Tools & Technologies
 
 SQL (MySQL / ClassicModels Database) → Data extraction & preprocessing
