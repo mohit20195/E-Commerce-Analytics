@@ -85,7 +85,7 @@ ORDER BY o.orderDate;
 
 
 
-🎯 Key Learnings
+## 🎯 Key Learnings
 
 Connecting SQL to Power BI with ODBC
 
@@ -96,7 +96,7 @@ Building cohort analysis in Power BI
 Designing interactive dashboards for decision-making
 
 
-📬 Contact
+## 📬 Contact
 
 👤 Mohit Sharma
 📧 mohit20195@gmail.com
