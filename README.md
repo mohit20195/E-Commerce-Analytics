@@ -68,7 +68,7 @@ The goal is to analyze **Orders, Customers, Revenue, Units, and Average Order Va
 ```DAX
 Date = CALENDARAUTO()
 
-
+---
 
 ## 📜 Example SQL Query
 ```sql
@@ -83,7 +83,7 @@ JOIN orderdetails od ON o.orderNumber = od.orderNumber
 GROUP BY c.country, o.orderDate
 ORDER BY o.orderDate;
 
-
+---
 
 ## 🎯 Key Learnings
 
@@ -95,6 +95,7 @@ Building cohort analysis in Power BI
 
 Designing interactive dashboards for decision-making
 
+---
 
 ## 📬 Contact
 
