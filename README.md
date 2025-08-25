@@ -70,6 +70,22 @@ Date = CALENDARAUTO()
 
 ---
 
+## 📜 **Example SQL Query**
+```sql
+SELECT 
+    c.country, 
+    o.orderDate, 
+    COUNT(o.orderNumber) AS total_orders, 
+    SUM(od.quantityOrdered * od.priceEach) AS revenue
+FROM orders o
+JOIN customers c ON o.customerNumber = c.customerNumber
+JOIN orderdetails od ON o.orderNumber = od.orderNumber
+GROUP BY c.country, o.orderDate
+ORDER BY o.orderDate;
+
+---
+
+
 ## 🎯 Key Learnings
 
 Connecting SQL to Power BI with ODBC
