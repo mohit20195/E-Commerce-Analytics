@@ -71,7 +71,7 @@ Date = CALENDARAUTO()
 ---
 
 ## 📜 **Example SQL Query**
-
+```sql
 SELECT 
     c.country, 
     o.orderDate, 
