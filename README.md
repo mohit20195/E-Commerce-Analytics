@@ -79,6 +79,15 @@ Published the interactive dashboard design.
 
 <img width="597" height="393" alt="image" src="https://github.com/user-attachments/assets/485d999f-4a96-4695-b767-fa88901dd35d" />
 
+📜 SQL Example Query
+SELECT 
+    customernumber,
+    country,
+    state,
+    city,
+    COUNT(customernumber) AS NumberOfCustomers
+FROM customers
+GROUP BY country, state, city;
 
 
 📜 Example DAX Measures
