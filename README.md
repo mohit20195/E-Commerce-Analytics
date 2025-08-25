@@ -1,68 +1,49 @@
-📊 E-Commerce Analytics Dashboard (Power BI + SQL)
+# 📊 E-Commerce Analytics Dashboard (Power BI + SQL)
 
+## 🔎 Project Overview  
+This project demonstrates how I used **SQL** for data extraction and transformation, and **Power BI** for building an interactive business intelligence dashboard.  
 
-🔎 Project Overview
+The goal is to analyze **Orders, Customers, Revenue, Units, and Average Order Value (AOV)** to generate actionable insights, such as:  
 
-This project demonstrates how I used SQL for data extraction and transformation, and Power BI for building an interactive business intelligence dashboard.
-The goal is to analyze Orders, Customers, Revenue, Units, and Average Order Value (AOV) to generate actionable insights, such as:
+- Revenue & order trends over time  
+- Repeat customer behavior & retention  
+- Cohort analysis of customer engagement  
+- KPIs for business performance monitoring  
 
-Revenue & order trends over time
+---
 
-Repeat customer behavior & retention
+## 🛠 Tools & Technologies
+- **SQL (MySQL / ClassicModels Database)** → Data extraction & preprocessing  
+- **Power BI Desktop** → Data modeling, DAX measures, and dashboard creation  
+- **ODBC Connector** → To connect SQL database with Power BI  
 
-Cohort analysis of customer engagement
+---
 
-KPIs for business performance monitoring
+## 📈 Dashboard Features
+✔️ **KPI Cards**: Revenue, Orders, Units, AOV  
+✔️ **Trend Analysis**: Monthly revenue & orders with drilldowns  
+✔️ **Cohort Heatmap**: Customer retention by cohort month  
+✔️ **Customer Segmentation**: New vs repeat customers  
+✔️ **Interactive Filters**: Slicers for country, product category, and time period  
+✔️ **Time Intelligence** using custom Date table (DAX)  
 
+---
 
+## ⚙️ Steps Performed
+1. **Extracted** raw data from SQL using joins & aggregations.  
+2. **Connected** Power BI to MySQL via ODBC.  
+3. **Created Date Table** for proper time intelligence in DAX.  
+4. Built **DAX Measures** for Revenue, Orders, AOV, Repeat Rate.  
+5. Designed **multiple report pages**:  
+   - **Page 1:** KPIs & New vs Returning Revenue  
+   - **Page 2:** Top 10 Customers & Products  
+   - **Page 3:** RFM Pie Chart & Table and Revenue by Country on Map
+   - **Page 4:** Cohort Heatmap  
+6. Published the interactive dashboard design.  
 
+---
 
-🛠 Tools & Technologies
-
-SQL (MySQL / ClassicModels Database) → Data extraction & preprocessing
-
-Power BI Desktop → Data modeling, DAX measures, and dashboard creation
-
-ODBC Connector → To connect SQL database with Power BI
-
-
-
-📈 Dashboard Features
-
-✔️ KPI Cards: Revenue, Orders, Units, AOV
-✔️ Trend Analysis: Monthly revenue & orders with drilldowns
-✔️ Cohort Heatmap: Customer retention by cohort month
-✔️ Customer Segmentation: New vs repeat customers
-✔️ Interactive Filters: Slicers for country, product category, and time period
-✔️ Time Intelligence using custom Date table (DAX)
-
-
-
-⚙️ Steps Performed
-
-Extracted raw data from SQL using joins & aggregations.
-
-Connected Power BI to MySQL via ODBC.
-
-Created Date Table for proper time intelligence in DAX.
-
-Built DAX Measures for Revenue, Orders, AOV, Repeat Rate.
-
-Designed multiple report pages:
-
-Page 1: KPIs & New vs Returning Revenue
-
-Page 2: Top 10 Customers & Products
-
-Page 3: RFM Pie Chart & Table and Revenue by Country on Map
-
-Page 4: Cohort Heatmap
-
-Published the interactive dashboard design.
-
-
-
-📊 Sample Dashboard Preview
+## 📊 Sample Dashboard Preview
 
 **Page 1: KPIs & New vs Returning Revenue**
 
@@ -80,29 +61,27 @@ Published the interactive dashboard design.
 
 <img width="597" height="393" alt="image" src="https://github.com/user-attachments/assets/485d999f-4a96-4695-b767-fa88901dd35d" />
 
-📜 SQL Example Query
 
-SELECT 
+---
 
-    customernumber,
-    
-    country,
-    
-    state,
-    
-    city,
-    
-    COUNT(customernumber) AS NumberOfCustomers
-    
-FROM customers
-
-GROUP BY country, state, city;
-
-
-
-📜 Example DAX Measures
-
+## 📜 Example DAX Measures
+```DAX
 Date = CALENDARAUTO()
+
+
+
+## 📜 Example SQL Query
+```sql
+SELECT 
+    c.country, 
+    o.orderDate, 
+    COUNT(o.orderNumber) AS total_orders, 
+    SUM(od.quantityOrdered * od.priceEach) AS revenue
+FROM orders o
+JOIN customers c ON o.customerNumber = c.customerNumber
+JOIN orderdetails od ON o.orderNumber = od.orderNumber
+GROUP BY c.country, o.orderDate
+ORDER BY o.orderDate;
 
 
 
