@@ -64,15 +64,19 @@ Published the interactive dashboard design.
 📊 Sample Dashboard Preview
 
 **Page 1: KPIs & New vs Returning Revenue**
+
 <img width="752" height="449" alt="image" src="https://github.com/user-attachments/assets/1c9f1978-f32a-4d1a-bd1d-b5dfd68af00a" />
 
 **Page 2: Page 2: Top 10 Customers & Products**
+
 <img width="764" height="421" alt="image" src="https://github.com/user-attachments/assets/613770be-3514-4fbb-94ad-38e3ebafa49c" />
 
 **Page 3: RFM Pie Chart & Table and Revenue by Country on Map**
+
 <img width="754" height="433" alt="image" src="https://github.com/user-attachments/assets/1dbe195a-aed1-4dc5-a647-878d80869c1d" />
 
 **Page 4: Cohort Heatmap**
+
 <img width="597" height="393" alt="image" src="https://github.com/user-attachments/assets/485d999f-4a96-4695-b767-fa88901dd35d" />
 
 
