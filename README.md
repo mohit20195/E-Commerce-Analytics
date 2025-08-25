@@ -1,79 +1,99 @@
-📊 E-Commerce Analytics Dashboard (Excel + SQL)
+📊 E-Commerce Analytics Dashboard (Power BI + SQL)
+
+
 🔎 Project Overview
 
-This project demonstrates how I used SQL for data extraction and transformation, and Excel for building an interactive analytics dashboard.
-The goal is to analyze Orders, Customers, Revenue, Units, and Average Order Value (AOV) to uncover business insights such as:
+This project demonstrates how I used SQL for data extraction and transformation, and Power BI for building an interactive business intelligence dashboard.
+The goal is to analyze Orders, Customers, Revenue, Units, and Average Order Value (AOV) to generate actionable insights, such as:
 
-Monthly revenue trends
+Revenue & order trends over time
 
-Order and unit volumes
+Repeat customer behavior & retention
 
-Repeat customer rate
+Cohort analysis of customer engagement
 
-Average Order Value (AOV)
+KPIs for business performance monitoring
+
 
 
 🛠 Tools & Technologies
 
 SQL (MySQL / ClassicModels Database) → Data extraction & preprocessing
 
-Excel → Pivot tables, pivot charts and slicers for interactive charts
+Power BI Desktop → Data modeling, DAX measures, and dashboard creation
 
-ODBC Connector → To connect SQL database with Excel
+ODBC Connector → To connect SQL database with Power BI
+
 
 
 📈 Dashboard Features
 
-✔️ Interactive KPIs: Revenue, Orders, Units, AOV
-✔️ Time-series analysis with monthly trends
-✔️ Cohort analysis for customer retention
-✔️ User-controlled slicers & drop-downs (e.g., by country, product, category)
-✔️ Clean and professional design
+✔️ KPI Cards: Revenue, Orders, Units, AOV
+✔️ Trend Analysis: Monthly revenue & orders with drilldowns
+✔️ Cohort Heatmap: Customer retention by cohort month
+✔️ Customer Segmentation: New vs repeat customers
+✔️ Interactive Filters: Slicers for country, product category, and time period
+✔️ Time Intelligence using custom Date table (DAX)
+
 
 
 ⚙️ Steps Performed
 
-Extracted data from SQL using queries (joins, aggregations).
+Extracted raw data from SQL using joins & aggregations.
 
-Connected MySQL database to Excel via ODBC DSN.
+Connected Power BI to MySQL via ODBC.
 
-Cleaned & shaped data into tables for analysis.
+Created Date Table for proper time intelligence in DAX.
 
-Built Pivot Tables & Pivot Charts.
+Built DAX Measures for Revenue, Orders, AOV, Repeat Rate.
 
-Applied Slicers & Dropdown controls for user interaction.
+Designed multiple report pages:
 
-Created a final dashboard summarizing KPIs and trends.
+Page 1: KPIs & New vs Returning Revenue
+
+Page 2: Top 10 Customers & Products
+
+Page 3: RFM Pie Chart & Table and Revenue by Country on Map
+
+Page 4: Cohort Heatmap
+
+Published the interactive dashboard design.
+
 
 
 📊 Sample Dashboard Preview
+**Page 1: KPIs & New vs Returning Revenue**
+<img width="752" height="449" alt="image" src="https://github.com/user-attachments/assets/1c9f1978-f32a-4d1a-bd1d-b5dfd68af00a" />
 
-<img width="1306" height="463" alt="image" src="https://github.com/user-attachments/assets/f7732a4c-3a45-4912-b3e0-b649c582902a" />
+**Page 2: Page 2: Top 10 Customers & Products**
+<img width="764" height="421" alt="image" src="https://github.com/user-attachments/assets/613770be-3514-4fbb-94ad-38e3ebafa49c" />
+
+**Page 3: RFM Pie Chart & Table and Revenue by Country on Map**
+<img width="754" height="433" alt="image" src="https://github.com/user-attachments/assets/1dbe195a-aed1-4dc5-a647-878d80869c1d" />
+
+**Page 4: Cohort Heatmap**
+<img width="597" height="393" alt="image" src="https://github.com/user-attachments/assets/485d999f-4a96-4695-b767-fa88901dd35d" />
 
 
 
-📜 SQL Example Query
-SELECT 
-    customernumber,
-    country,
-    state,
-    city,
-    COUNT(customernumber) AS NumberOfCustomers
-FROM customers
-GROUP BY country, state, city;
+📜 Example DAX Measures
+Date = CALENDARAUTO()
+
 
 
 🎯 Key Learnings
 
-How to integrate SQL with Excel using ODBC
+Connecting SQL to Power BI with ODBC
 
-Building interactive dashboards with pivot charts and slicers
+Creating DAX measures and date tables for time intelligence
 
-Presenting business insights effectively
+Building cohort analysis in Power BI
 
+Designing interactive dashboards for decision-making
 
 
 📬 Contact
 
 👤 Mohit Sharma
 📧 mohit20195@gmail.com
+
