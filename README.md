@@ -65,13 +65,13 @@ The goal is to analyze **Orders, Customers, Revenue, Units, and Average Order Va
 ---
 
 ## 📜 Example DAX Measures
-```DAX
+
 Date = CALENDARAUTO()
 
 ---
 
 ## 📜 **Example SQL Query**
-```sql
+
 SELECT 
     c.country, 
     o.orderDate, 
