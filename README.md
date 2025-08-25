@@ -62,6 +62,7 @@ Published the interactive dashboard design.
 
 
 📊 Sample Dashboard Preview
+
 **Page 1: KPIs & New vs Returning Revenue**
 <img width="752" height="449" alt="image" src="https://github.com/user-attachments/assets/1c9f1978-f32a-4d1a-bd1d-b5dfd68af00a" />
 
@@ -77,6 +78,7 @@ Published the interactive dashboard design.
 
 
 📜 Example DAX Measures
+
 Date = CALENDARAUTO()
 
 
